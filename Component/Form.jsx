@@ -43,8 +43,8 @@ const Form = ({
         className="inputHere"
         
       />
-      <button  type="submit" className="submit" onClick={submitTodo}>
-       <GrFormAdd  /> 
+      <button  type="submit" disabled={!todos} className="submit" onClick={submitTodo}>
+       <p>Add</p>
       </button>
       <select className="input" onChange={statusHandler}>
         <option>All</option>
