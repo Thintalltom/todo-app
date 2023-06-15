@@ -1,0 +1,34 @@
+.sidebar
+{
+    background-color: red;
+    background-size: contain;
+    min-height: 100vh;
+    max-width: 60vw;
+    
+}
+.taskbar
+{
+    list-style: none;
+    margin-top: 20px;
+}
+.taskbar li {
+    color:white;
+    gap:50px;
+    margin-top: 20px;
+    text-align: left !important;
+}
+.nullbar{
+    display: none;
+    cursor: pointer;
+
+}
+.bgsidebar
+{
+    background-color: red;
+    background-size: contain;
+    min-height: 100vh;
+    max-width: 20vw;
+    padding: 20px;
+    text-align: left;
+    cursor: pointer;
+}

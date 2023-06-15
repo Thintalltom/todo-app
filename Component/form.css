@@ -1,0 +1,43 @@
+.task {
+    color: black;
+    font-size: x-large;
+    font-family:  sans-serif;
+    margin-top: 40px;
+}
+.input{
+    border: 1px solid black;
+    margin-left:20px;
+    padding: 10px;
+    cursor: pointer;
+}
+.inputHere{
+    border: 1px solid black;
+    margin-left:20px;
+    padding: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.submit
+{
+    border: 1px solid black;
+    height: 40px;
+   padding: 5px;
+}
+
+.form
+{
+    margin-top: 20px;
+    text-align: center;
+    
+}
+@media only screen and  (max-width:600px ) {
+   .inputHere{
+      
+       height: 40px;
+   }
+   .input
+   {
+   margin-top: 10px;
+   height: 40px;
+   }
+}

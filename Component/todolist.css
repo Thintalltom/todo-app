@@ -1,0 +1,61 @@
+.container
+{
+    display: flex;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 255, 0.349);
+    background-size: contain;
+    width: 30rem ;
+    text-align: center;
+    height: 3rem;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw ;
+
+}
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.center
+{
+    text-align: center;
+    margin-top: 20px ;
+}
+@media only screen and  (max-width:600px ) {
+    .container
+{
+    width: 15rem ;
+    display: flex;
+   
+    align-items: center;
+    font-size:small ;
+    justify-content: space-around;
+    
+}
+.mainContainer {
+ 
+    width: 100vw ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.icon1
+{
+    color: white;
+}
+.icon2
+{
+    color: white;
+}
+
+
+}
+    

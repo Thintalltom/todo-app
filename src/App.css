@@ -1,0 +1,30 @@
+#root {
+
+  margin: 0 auto;
+  padding: 0;
+
+}
+.app
+{
+
+ justify-content: center;
+ align-items: center;
+background-color: rgba(107, 13, 119, 0.493);
+color: black;
+background-size: contain;
+width: 100vw;
+height: 100vh;
+
+}
+.bg
+{
+  padding: 20px;
+}
+.bg-button
+{
+  border: 1px solid black;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+
