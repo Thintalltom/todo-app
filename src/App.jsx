@@ -4,12 +4,10 @@ import "./App.css";
 import TodoList from "../Component/TodoList";
 import { MdDarkMode, MdOutlineDarkMode } from "react-icons/md";
 
-const fetchTodo = JSON.parse(localStorage.getItem("todo")); // to get the items stored in localstorage
-
 function App() {
   const [Info, setInfo] = useState("");
   const [Date, setDate] = useState("");
-  const [todos, setTodos] = useState(fetchTodo); // make the fetch todos as the main thing in it
+  const [todos, setTodos] = useState([]); // make the fetch todos as the main thing in it
   const [status, setStatus] = useState("all");
   const [filterTodo, setFilterTodo] = useState([]);
   const [background, setBackground] = useState(false);
@@ -27,29 +25,39 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    filteredHandler();
-  }, [todos, status]);
+  const saveLocal = () => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  };
+  const getLocal = () => {
+    if (localStorage.getItem("todos") === null) {
+      localStorage.setItem("todos", JSON.stringify([]));
+    } else {
+      let local = JSON.parse(localStorage.getItem("todos"));
+      setTodos(local);
+    }
+  };
 
   useEffect(() => {
-    localStorage.setItem("todo", JSON.stringify(todos));
-  }, [todos]); // save the items in a localstorage and make the todos as a dependent
+    filteredHandler();
+   
+  }, [todos, status]);
+
+
 
   return (
     <div className={background ? "app" : ""}>
       <div className="bg">
-      {background ? (
-        <button onClick={handleClick} className='bg-button'>
-          <MdOutlineDarkMode />
-        </button>
-      ) : (
-        <button onClick={handleClick} className='bg-button'>
-          <MdDarkMode />
-        </button>
-      )}
-
+        {background ? (
+          <button onClick={handleClick} className="bg-button">
+            <MdOutlineDarkMode />
+          </button>
+        ) : (
+          <button onClick={handleClick} className="bg-button">
+            <MdDarkMode />
+          </button>
+        )}
       </div>
-  
+
       <Form
         status={status}
         setStatus={setStatus}
