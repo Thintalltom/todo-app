@@ -3,7 +3,7 @@ import Form from "../Component/Form";
 import "./App.css";
 import TodoList from "../Component/TodoList";
 import { MdDarkMode, MdOutlineDarkMode } from "react-icons/md";
-const localInfo = JSON.parse(localStorage.getItem('todos') || "[]")
+const localInfo = JSON.parse(localStorage.getItem('todos') || "[]")// this function states this parses the data saved if todos is available or provide an empty array
 
 function App() {
   const [Info, setInfo] = useState("");
