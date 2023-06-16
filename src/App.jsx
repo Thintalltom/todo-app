@@ -3,11 +3,12 @@ import Form from "../Component/Form";
 import "./App.css";
 import TodoList from "../Component/TodoList";
 import { MdDarkMode, MdOutlineDarkMode } from "react-icons/md";
+const localInfo = JSON.parse(localStorage.getItem('todos'))
 
 function App() {
   const [Info, setInfo] = useState("");
   const [Date, setDate] = useState("");
-  const [todos, setTodos] = useState([]); // make the fetch todos as the main thing in it
+  const [todos, setTodos] = useState(localInfo); // make the fetch todos as the main thing in it
   const [status, setStatus] = useState("all");
   const [filterTodo, setFilterTodo] = useState([]);
   const [background, setBackground] = useState(false);
@@ -25,23 +26,19 @@ function App() {
     }
   };
 
-  const saveLocal = () => {
-    localStorage.setItem("todos", JSON.stringify(todos));
-  };
-  const getLocal = () => {
-    if (localStorage.getItem("todos") === null) {
-      localStorage.setItem("todos", JSON.stringify([]));
-    } else {
-      let local = JSON.parse(localStorage.getItem("todos"));
-      setTodos(local);
-    }
-  };
 
   useEffect(() => {
     filteredHandler();
-   
+    localStorage.setItem('todos', JSON.stringify(todos))
+     
   }, [todos, status]);
 
+    
+
+
+
+
+   
 
 
   return (

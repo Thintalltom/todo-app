@@ -12,7 +12,9 @@ const TodoList = ({ todos, setTodos, status, setStatus, filterTodo }) => {
       <p className="center">Todo List</p>
       <div>
         {filterTodo.map((todo) => (
+          <div key={todo.id}>
           <Todo  status ={status} setStatus = {setStatus} todo={todo} setTodos ={setTodos} todos={todos}/>
+          </div>
         ))}
       </div>
      
