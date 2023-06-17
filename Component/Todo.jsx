@@ -30,9 +30,14 @@ const Todo = ({ todo, setTodos, todos, setStatus, status }) => {
      
     
             <div key={todo.id } className='container'>
+              <div className="words">
               <p className={`${todo.completed ? 'completed' : ''}`}>{todo.text}</p>   
+              </div>
+              <div className="icons">
               <AiFillDelete onClick={deleteBtn} className='icon1' /> 
               <FaCheck onClick={completeHandler} className='icon2' /> 
+              </div>
+              
             </div>
         
    

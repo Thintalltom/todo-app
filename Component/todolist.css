@@ -19,6 +19,15 @@
     width: 100vw ;
 
 }
+
+.icons
+{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    gap: 2rem;
+
+}
 .completed {
     text-decoration: line-through;
     opacity: 0.5;
